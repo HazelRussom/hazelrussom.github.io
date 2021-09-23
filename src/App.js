@@ -1,11 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
+import { Typography } from '@mui/material'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>Hello World!</p>
+        <Typography>MUI Hello World!</Typography>
       </header>
     </div>
   );
