@@ -1,13 +1,12 @@
 import './App.css';
-import { Typography } from '@mui/material'
+import { Container } from '@mui/material';
+import Header from "./Header";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Typography>MUI Hello World!</Typography>
-      </header>
-    </div>
+    <Container>
+      <Header/>
+    </Container>
   );
 }
 
