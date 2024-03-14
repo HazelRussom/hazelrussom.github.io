@@ -8,11 +8,10 @@ export default function AboutMe() {
         About Me
       </Typography>
       <Typography color='primary' variant='body1'>
-        I like writing code. I like to write code that's easy to maintain.
-        I have over 5 years of experience working as a Software Engineer. 
-        {/* My desire to learn more pushes me to regularly learn new technologies, and given me a comfortable base for full-stack roles. */}
-        {/* I have a passion for planning and optimising tasks to work in the most efficient way I can. */}
-        Currently I'm working remotely with a full-time position at Codurance.
+        Hello! I'm a Software Engineer with over 5 years of experience. 
+        I'm based in Scotland and currently work remotely in a full-stack position at Codurance. 
+
+        I like writing reliable code that's easy to maintain.
       </Typography>
     </Box>
   );
