@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link, Typography, Card, CardMedia } from '@material-ui/core'
+import { Link, Typography, Card, CardMedia } from '@mui/material'
 
 class LinksCard extends Component {
   render() {
