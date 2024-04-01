@@ -6,6 +6,8 @@ import theme from './theme';
 import { ThemeProvider } from '@mui/material/styles';
 import reportWebVitals from './reportWebVitals';
 
+import './i18n';
+
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
