@@ -7,10 +7,17 @@ import { Suspense } from 'react';
 function App() {
   return (
     <Suspense fallback="...is loading">
-    <Container>
-      <Header/>
-      <LandingPage/>
-    </Container></Suspense>
+      <Container>
+        <Header/>
+        <LandingPage/>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+    </Container>
+  </Suspense>
   );
 }
 
