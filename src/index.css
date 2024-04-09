@@ -32,14 +32,14 @@
 .cube:nth-child(4) {
   -webkit-animation-delay: 6s;
   animation-delay: 6s;
-  left: 90vw;
+  left: 85vw;
   top: 10vh;
 }
 .cube:nth-child(5) {
   -webkit-animation-delay: 8s;
   animation-delay: 8s;
   left: 10vw;
-  top: 85vh;
+  top: 80vh;
 }
 
 @-webkit-keyframes cube {

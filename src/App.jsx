@@ -3,6 +3,7 @@ import { Container } from '@mui/material';
 import LandingPage from "./LandingPage";
 import Header from "./Header";
 import { Suspense } from 'react';
+import BackgroundElements from './BackgroundElements';
 
 function App() {
   return (
@@ -10,12 +11,7 @@ function App() {
       <Container>
         <Header/>
         <LandingPage/>
-        <div class="cube"></div>
-        <div class="cube"></div>
-        <div class="cube"></div>
-        <div class="cube"></div>
-        <div class="cube"></div>
-        <div class="cube"></div>
+        <BackgroundElements/>
     </Container>
   </Suspense>
   );
