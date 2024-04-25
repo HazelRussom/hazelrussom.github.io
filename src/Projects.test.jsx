@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/react";
-import { <Projects></Projects> } from "./<Projects></Projects>";
+import Projects from "./Projects";
 
-describe('<Projects></Projects> should', () => {
-  it('Do a thing', () => {
-    render(<<Projects></Projects>/>);
+describe('Projects should', () => {
+  it('render a title', () => {
+    render(<Projects/>);
 
-    //Assert
+    expect(screen.getByText("Projects")).toBeVisible();
   });
 });
