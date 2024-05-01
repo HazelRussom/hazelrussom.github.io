@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import Projects from "./Projects";
+import ProjectReader from "./ProjectReader";
 
 describe('Projects should', () => {
   it('render a title', () => {
