@@ -5,7 +5,7 @@ jest.mock("./Header", () => () => <span data-testid="header"/>);
 
 jest.mock("./LandingPage", () => () => <span data-testid="landing"/>);
 
-jest.mock("./Projects", () => () => <span data-testid="projects"/>);
+jest.mock("./Projects/Projects", () => () => <span data-testid="projects"/>);
 
 describe("App should", () => {
     it("render a header", () => {
