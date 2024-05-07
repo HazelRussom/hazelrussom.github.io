@@ -2,7 +2,13 @@ import { render, screen } from "@testing-library/react";
 import Projects from "./Projects";
 import ProjectReader from "./ProjectReader";
 
+jest.mock("./ProjectReader")
+
 describe('Projects should', () => {
+  beforeEach(() => {
+    ProjectReader.prototype.get = jest.fn();
+  });
+
   it('render a title', () => {
     render(<Projects/>);
 
