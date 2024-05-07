@@ -17,9 +17,9 @@ describe('Projects should', () => {
 
   it('get all projects', () => {
     let getProjects = jest.fn();
+    ProjectReader.prototype.get = getProjects;
     
     render(<Projects/>);
-    ProjectReader.prototype.get = getProjects;
 
     expect(getProjects).toBeCalledTimes(1);
   });
