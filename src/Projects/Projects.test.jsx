@@ -4,6 +4,14 @@ import ProjectReader from "./ProjectReader";
 
 jest.mock("./ProjectReader")
 
+jest.mock("./ProjectCard", () => {
+  return {
+      default: jest.fn().mockImplementation(() => {
+          return <span data-testid="project" />;
+      })
+  };
+});
+
 describe('Projects should', () => {
   beforeEach(() => {
     ProjectReader.prototype.get = jest.fn();
@@ -22,5 +30,14 @@ describe('Projects should', () => {
     render(<Projects/>);
 
     expect(getProjects).toBeCalledTimes(1);
+  });
+
+  it('render one project', () => {
+    let getProjects = jest.fn();
+    ProjectReader.prototype.get = getProjects;
+    
+    render(<Projects/>);
+
+    expect(screen.getByTestId("project")).toBeVisible();
   });
 });
