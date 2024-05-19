@@ -1,15 +1,12 @@
 import { render, screen } from "@testing-library/react";
+import Project from "./Project";
 import Projects from "./Projects";
 import ProjectReader from "./ProjectReader";
 
 jest.mock("./ProjectReader")
 
 jest.mock("./ProjectCard", () => {
-  return {
-      default: jest.fn().mockImplementation(() => {
-          return <span data-testid="project" />;
-      })
-  };
+  return () => <span data-testid="project" />;
 });
 
 describe('Projects should', () => {
@@ -34,6 +31,13 @@ describe('Projects should', () => {
 
   it('render one project', () => {
     let getProjects = jest.fn();
+    const projects = [
+      new Project()
+    ];
+    getProjects.mockImplementation(() => { 
+      return projects
+  })
+
     ProjectReader.prototype.get = getProjects;
     
     render(<Projects/>);
