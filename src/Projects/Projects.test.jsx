@@ -29,6 +29,20 @@ describe('Projects should', () => {
     expect(getProjects).toBeCalledTimes(1);
   });
 
+  it('render no projects', () => {
+    let getProjects = jest.fn();
+    
+    getProjects.mockImplementation(() => { 
+      return []
+  })
+
+    ProjectReader.prototype.get = getProjects;
+    
+    render(<Projects/>);
+
+    expect(screen.queryByTestId("project")).not.toBeInTheDocument();
+  });
+
   it('render one project', () => {
     let getProjects = jest.fn();
     const projects = [

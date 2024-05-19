@@ -3,12 +3,14 @@ import ProjectCard from "./ProjectCard";
 
 export default function Projects() { 
     const reader = new ProjectReader();
-    reader.get();
+    const projects = reader.get();
 
     return (
         <>
             <p>Projects</p>
+            { projects && 
             <ProjectCard/>
+            }
         </>
         
     )
