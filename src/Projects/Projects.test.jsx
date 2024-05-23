@@ -11,7 +11,9 @@ jest.mock("./ProjectCard", () => {
 
 describe('Projects should', () => {
   beforeEach(() => {
-    ProjectReader.prototype.get = jest.fn();
+    ProjectReader.prototype.get = jest.fn().mockImplementation(() => { 
+      return []
+    })
   });
 
   it('render a title', () => {
@@ -24,20 +26,16 @@ describe('Projects should', () => {
     let getProjects = jest.fn();
     ProjectReader.prototype.get = getProjects;
     
+    getProjects.mockImplementation(() => { 
+      return []
+    })
+    
     render(<Projects/>);
 
     expect(getProjects).toBeCalledTimes(1);
   });
 
-  it('render no projects', () => {
-    let getProjects = jest.fn();
-    
-    getProjects.mockImplementation(() => { 
-      return []
-  })
-
-    ProjectReader.prototype.get = getProjects;
-    
+  it('render no projects', () => {    
     render(<Projects/>);
 
     expect(screen.queryByTestId("project")).not.toBeInTheDocument();
@@ -48,8 +46,9 @@ describe('Projects should', () => {
     const projects = [
       new Project()
     ];
+
     getProjects.mockImplementation(() => { 
-      return projects
+      return projects;
   })
 
     ProjectReader.prototype.get = getProjects;

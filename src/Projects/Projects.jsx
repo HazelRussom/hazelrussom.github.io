@@ -8,7 +8,7 @@ export default function Projects() {
     return (
         <>
             <p>Projects</p>
-            { projects && 
+            { projects.length > 0 && 
             <ProjectCard/>
             }
         </>
