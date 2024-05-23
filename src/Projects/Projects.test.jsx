@@ -5,8 +5,8 @@ import ProjectReader from "./ProjectReader";
 
 jest.mock("./ProjectReader")
 
-jest.mock("./ProjectCard", () => {
-  return () => <span data-testid="project" />;
+jest.mock("./ProjectCard", (project) => {
+  return () => <span data-testid="project">{project.name}</span>;
 });
 
 describe('Projects should', () => {
@@ -44,7 +44,7 @@ describe('Projects should', () => {
   it('render one project', () => {
     let getProjects = jest.fn();
     const projects = [
-      new Project()
+      new Project("Test")
     ];
 
     getProjects.mockImplementation(() => { 
