@@ -5,11 +5,14 @@ export default function Projects() {
     const reader = new ProjectReader();
     const projects = reader.get();
 
+    if(projects.length > 0){
+        console.warn(projects[0].name)
+    }
     return (
         <>
             <p>Projects</p>
             { projects.length > 0 && 
-            <ProjectCard/>
+            <ProjectCard project={projects[0]}/>
             }
         </>
         
