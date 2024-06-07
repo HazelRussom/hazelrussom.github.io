@@ -3,15 +3,15 @@ import Project from "./Project";
 import Projects from "./Projects";
 import ProjectReader from "./ProjectReader";
 
-jest.mock("./ProjectReader")
+vi.mock("./ProjectReader")
 
-jest.mock("./ProjectCard", (project) => {
+vi.mock("./ProjectCard", (project) => {
   return () => <span data-testid="project">{project.name}</span>;
 });
 
 describe('Projects should', () => {
   beforeEach(() => {
-    ProjectReader.prototype.get = jest.fn().mockImplementation(() => { 
+    ProjectReader.prototype.get = vi.fn().mockImplementation(() => { 
       return []
     })
   });
@@ -23,7 +23,7 @@ describe('Projects should', () => {
   });
 
   it('get all projects', () => {
-    let getProjects = jest.fn();
+    let getProjects = vi.fn();
     ProjectReader.prototype.get = getProjects;
     
     getProjects.mockImplementation(() => { 
@@ -42,7 +42,7 @@ describe('Projects should', () => {
   });
 
   it.skip('render one project', () => {
-    let getProjects = jest.fn();
+    let getProjects = vi.fn();
     const projects = [
       new Project("Test")
     ];
