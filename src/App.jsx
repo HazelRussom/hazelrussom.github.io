@@ -8,14 +8,17 @@ import BackgroundElements from './BackgroundElements';
 
 function App() {
   return (
-    <Suspense fallback="...is loading">
-      <Container>
+    <div>
+
+    {/* <Suspense fallback="...is loading">
+      <Container> */}
         <Header/>
         <LandingPage/>
         <Projects/>
-        <BackgroundElements/>
-    </Container>
-  </Suspense>
+        {/* <BackgroundElements/> */}
+    {/* </Container>
+  </Suspense> */}
+    </div>
   );
 }
 

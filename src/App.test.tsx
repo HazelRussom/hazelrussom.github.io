@@ -1,11 +1,29 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
-vi.mock("./Header", () => () => <span data-testid="header" />);
+vi.mock("./Header", () => {
+  return {
+    default: vi.fn().mockImplementation(() => {
+      <span data-testid="header" />;
+    }),
+  };
+});
 
-vi.mock("./LandingPage", () => () => <span data-testid="landing" />);
+vi.mock("./LandingPage", () => {
+  return {
+    default: vi.fn().mockImplementation(() => {
+      <span data-testid="landing" />;
+    }),
+  };
+});
 
-vi.mock("./Projects/Projects", () => () => <span data-testid="projects" />);
+vi.mock("./Projects/Projects", () => {
+  return {
+    default: vi.fn().mockImplementation(() => {
+      <span data-testid="projects" />;
+    }),
+  };
+});
 
 describe("App should", () => {
   it("render a header", () => {
