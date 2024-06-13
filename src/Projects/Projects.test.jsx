@@ -6,7 +6,11 @@ import ProjectReader from "./ProjectReader";
 vi.mock("./ProjectReader")
 
 vi.mock("./ProjectCard", (project) => {
-  return () => <span data-testid="project">{project.name}</span>;
+  return { 
+    default: vi.fn().mockImplementation(() => {
+      () => <span data-testid="project">{project.name}</span>;
+    }),
+  };
 });
 
 describe('Projects should', () => {
