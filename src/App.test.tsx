@@ -4,7 +4,7 @@ import App from "./App";
 vi.mock("./Header", () => {
   return {
     default: vi.fn().mockImplementation(() => {
-      <span data-testid="header" />;
+      return <span data-testid="header" />;
     }),
   };
 });
@@ -12,7 +12,7 @@ vi.mock("./Header", () => {
 vi.mock("./LandingPage", () => {
   return {
     default: vi.fn().mockImplementation(() => {
-      <span data-testid="landing" />;
+      return <span data-testid="landing" />;
     }),
   };
 });
@@ -20,7 +20,7 @@ vi.mock("./LandingPage", () => {
 vi.mock("./Projects/Projects", () => {
   return {
     default: vi.fn().mockImplementation(() => {
-      <span data-testid="projects" />;
+      return <span data-testid="projects" />;
     }),
   };
 });
