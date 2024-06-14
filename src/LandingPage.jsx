@@ -6,7 +6,7 @@ export default function LandingPage() {
     return (
         <Container maxWidth="sm" align="center">
             <AboutMe/>
-            <Links/>
+            {/* <Links/> */}
         </Container>
     )
 }
