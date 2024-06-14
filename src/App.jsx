@@ -10,14 +10,14 @@ function App() {
   return (
     <div>
 
-    {/* <Suspense fallback="...is loading">
-      <Container> */}
+    <Suspense fallback="...is loading">
+      <Container>
         <Header/>
         <LandingPage/>
         <Projects/>
-        {/* <BackgroundElements/> */}
-    {/* </Container>
-  </Suspense> */}
+        <BackgroundElements/> 
+    </Container>
+  </Suspense>
     </div>
   );
 }
