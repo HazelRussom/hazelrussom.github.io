@@ -13,8 +13,8 @@ function App() {
     <Suspense fallback="...is loading">
       <Container>
         <Header/>
-        <LandingPage/>
-        <Projects/>
+        {/* <LandingPage/> */}
+        {/* <Projects/> */}
         <BackgroundElements/> 
     </Container>
   </Suspense>
