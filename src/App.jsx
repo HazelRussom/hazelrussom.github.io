@@ -14,7 +14,7 @@ function App() {
       <Container>
         <Header/>
         <LandingPage/>
-        {/* <Projects/> */}
+        <Projects/>
         <BackgroundElements/> 
     </Container>
   </Suspense>
