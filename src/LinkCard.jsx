@@ -4,7 +4,7 @@ import { Link, Typography, Card, CardMedia } from '@mui/material'
 class LinksCard extends Component {
   render() {
     const{title, link, image} = this.props;
-    var imagePath = process.env.PUBLIC_URL + "images/" + image;
+    var imagePath = "images/" + image;
     
     return (
       <Link href={link}>
