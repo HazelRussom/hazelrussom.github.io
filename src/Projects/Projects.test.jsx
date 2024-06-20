@@ -45,7 +45,7 @@ describe('Projects should', () => {
     expect(screen.queryByTestId("project")).not.toBeInTheDocument();
   });
 
-  it.skip('render one project', () => {
+  it('render one project', () => {
     let getProjects = vi.fn();
     const projects = [
       new Project("Test")
@@ -59,6 +59,6 @@ describe('Projects should', () => {
     
     render(<Projects/>);
 
-    expect(screen.getByTestId("project")).toBeVisible();
+    expect(screen.getByTestId("project")).toHaveTextContent("Test");
   });
 });
