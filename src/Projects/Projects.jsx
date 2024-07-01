@@ -5,13 +5,12 @@ export default function Projects() {
     const reader = new ProjectReader();
     const projects = reader.get();
    
+    const projectCards = projects.map((project, i) => <ProjectCard key={i} project={project}/>)
+
     return (
         <>
             <p>Projects</p>
-            { projects.length > 0 && 
-            
-             <ProjectCard project={projects[0]}/>
-            }
+            {projectCards}
         </>
         
     )

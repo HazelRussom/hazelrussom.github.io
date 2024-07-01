@@ -59,4 +59,20 @@ describe("Projects should", () => {
 
     expect(screen.getByTestId("project")).toHaveTextContent("Test");
   });
+
+  it("render multiple projects", () => {
+    let getProjects = vi.fn();
+    const projects = [new Project("TestOne"), new Project("TestTwo")];
+
+    getProjects.mockImplementation(() => {
+      return projects;
+    });
+
+    ProjectReader.prototype.get = getProjects;
+
+    render(<Projects />);
+
+    const renderedProjects = screen.getAllByTestId("project");
+    expect(renderedProjects.length).toBe(2);
+  });
 });
